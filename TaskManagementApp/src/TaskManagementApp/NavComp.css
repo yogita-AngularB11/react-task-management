@@ -1,0 +1,10 @@
+.bg-body-tertiary {
+    background-color: #f8f9fa !important;
+  }
+  
+  @media (max-width: 768px) {
+    .me-auto {
+      margin-bottom: 1rem;
+    }
+  }
+  
