@@ -14,20 +14,20 @@ import { TaskContext } from './TaskProvider';
 
 
 const NavComp = () => {
-const {filteredTasks,filterTasksBy}=useContext(TaskContext);
+  const { filteredTasks, filterTasksBy } = useContext(TaskContext);
   const navigate = useNavigate();
   //-----------------------code for search bar------------------
-  
-    const [ searchQuery, setSearchQuery ] = useState('');
-    //----------------------------------------------------------
-    const [selectedCategory, setSelectedCategory] = useState(null); // State for selected category
+
+  const [searchQuery, setSearchQuery] = useState('');
+  //----------------------------------------------------------
+  const [selectedCategory, setSelectedCategory] = useState(null); // State for selected category
   const [selectedPriority, setSelectedPriority] = useState(null); // State for selected priority
-  
-    const handleChange = (e) => {
-      var lowerCase = e.target.value.toLowerCase();
-      setSearchQuery(lowerCase);
-      filteredTasks(lowerCase);
-    };
+
+  const handleChange = (e) => {
+    var lowerCase = e.target.value.toLowerCase();
+    setSearchQuery(lowerCase);
+    filteredTasks(lowerCase);
+  };
 
   //-----------------CODE FOR FILTERING TASKS-------------------
   // const handleFilterSelect = (filterType) => {
@@ -48,7 +48,6 @@ const {filteredTasks,filterTasksBy}=useContext(TaskContext);
     filterTasksBy(priority)
     // console.log(`Priority selected: ${priority}`);
   };
-
 
   return (
     <Navbar bg="light" expand="lg" className="bg-body-tertiary">
@@ -94,7 +93,7 @@ const {filteredTasks,filterTasksBy}=useContext(TaskContext);
             <Button variant="primary" className="me-2 addTaskBtn" onClick={() => { navigate('/addTask') }}>
               Add Task
             </Button>
-            <Button variant="danger">
+            <Button variant="danger" onClick={() => { navigate('/') }}>
               Logout
             </Button>
           </Form>

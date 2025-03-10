@@ -1,0 +1,14 @@
+.vh-100 {
+    height: 100vh;
+  }
+  
+  form {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 576px) {
+    form {
+      padding: 20px;
+    }
+  }
+  

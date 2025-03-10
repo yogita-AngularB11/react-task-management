@@ -17,22 +17,21 @@ import TaskCard from './TaskManagementApp/TaskCard';
 function App() {
   return (
     <>
-    {/* <Login/> */}
-    {/* <SignUp/> */}
-   <TaskProvider>
-   <Router>
-        <Routes>
-          <Route exact path='/' element={<Dashboard />}></Route>
-          <Route exact path='/AddTask' element={<AddTask/>}></Route>
-          <Route exact path='/EditTask/:id' element={<EditTask />}></Route>
-          <Route exact path='/CompleteTask' element={<CompleteTask />}></Route>
-          <Route exact path='/Login' element={<Login />}></Route>
-          <Route exact path='/SignUp' element={<SignUp/>}></Route>
-          <Route exact path='/TaskCard/:id' element={<TaskCard/>}></Route>
-        </Routes>
-      </Router>
-   </TaskProvider>
-      
+      <TaskProvider>
+        <Router>
+          <Routes>
+            <Route exact path='/' element={<Login />}></Route>
+            <Route exact path='/dashboard' element={<Dashboard />}></Route>
+            <Route exact path='/AddTask' element={<AddTask />}></Route>
+            <Route exact path='/EditTask/:id' element={<EditTask />}></Route>
+            <Route exact path='/CompleteTask' element={<CompleteTask />}></Route>
+            <Route exact path='/Login' element={<Login />}></Route>
+            <Route exact path='/SignUp' element={<SignUp />}></Route>
+            <Route exact path='/TaskCard/:id' element={<TaskCard />}></Route>
+          </Routes>
+        </Router>
+      </TaskProvider>
+
     </>
   );
 }
